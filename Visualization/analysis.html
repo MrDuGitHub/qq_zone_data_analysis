@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+	<meta http-equiv="Pragma" content="no-cache,no-store" />
+	<meta http-equiv="expires" content="0" />
+    <title>QQ Moods Analysis</title>
+
+    <link rel="canonical" href="analysis.html">
+
+    <!-- Bootstrap core CSS bootstrap-4.0.0/dist/css/-->
+	<link href="css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+	
+     <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	<style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;margin:0;}</style>
+	
+    <!-- Custom styles for this template -->
+    <link href="css/analysis.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+	  <div id="vue_0">
+		<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">QQ Mood Analysis</a>
+			<input class="form-control form-control-dark w-100" type="text" placeholder="uid" aria-label="uid" v-model="uid">
+<!-- 			<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="#">Enter</a>
+			</li>
+			</ul> -->
+		</nav>
+ 
+		<div class="container-fluid">
+		  <div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			  <div class="sidebar-sticky">
+				<ul class="nav flex-column">
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="draw_year"> Year </button>
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="draw_month"> Month </button>
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="draw_day"> Day </button>
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="draw_hour"> Hour </button>	
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="draw_word"> word cloud </button>	
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="recommend_time"> recommend_time </button>	
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="recommend_word "> recommend_word </button>	
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="recommend_all"> recommend </button>	
+				  </li>
+				  <li class="nav-item">
+					<button type="button" class="btn btn-link"  v-on:click="reset"> reset </button>	
+				  </li>
+				</ul>
+			  </div>
+			</nav>
+			<main role="main" id="frame1" class="ml-sm-auto col-lg-10" >
+				<div id="mountNode"></div>
+				<div id="main"></div>
+			</main>
+			<main role="main" id="frame2">
+				<div id="mountNode1"></div>
+				<div id="main1" style="height:800px"></div>
+			</main>
+		  </div>
+		</div>
+		</div>
+		<script src="js/g2.min.js"></script>
+		<script src="js/data-set.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+        <script src="js/vue_g2.js"></script>
+		<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+	</body>
+</html>
